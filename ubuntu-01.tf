@@ -95,6 +95,7 @@ resource "vsphere_virtual_machine" "terraform-ubuntu" {
 
       ipv4_gateway    = "${var.vsphere_ipv4_gateway}"
       dns_server_list = ["${var.vsphere_dns_servers}"]
+      dns_suffix_list = ["${var.vsphere_domain}"]
     }
   }
 }
